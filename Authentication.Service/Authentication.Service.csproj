@@ -25,6 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\ClientController.cs" />
+    <Compile Remove="Controllers\GameController.cs" />
     <Compile Remove="Controllers\ProductController.cs" />
   </ItemGroup>
 

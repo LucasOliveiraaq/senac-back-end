@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9Df9gMJArQsvZom305fpfZbJU0OoxmSiyiO8ok/oRuq63WrXdB70Iv3bYLFB4Goku53nhR8lGyHn5oldKk7t4g==",
+  "dgSpecHash": "GzkUnUkL0bRLlnZ8zqS0Cjsrxx/djMybIkDpRvEHCQ0zIOsrlA9Fir0Xd/7EMfeCVt59rwokzOXlH204xyRZSA==",
   "success": true,
-  "projectFilePath": "E:\\sourceCode\\senac\\Girhub\\senac-back-end\\Authentication.Domain\\Authentication.Domain.csproj",
+  "projectFilePath": "C:\\Projeto\\ApiSenac\\Authentication.Domain\\Authentication.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
