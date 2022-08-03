@@ -6,7 +6,7 @@ namespace Authentication.Application.ClientModule
     public interface IClient
     {
         Task<IEnumerable<ClientModule>> GetAll();
-        Task<string> Create(ClientModule client);
+        Task<string> Create(Client client);
         Task<bool> Check(string email);
         Task<string> CheckIfIdExist(Guid id);
         Task<string> Delete(Guid id);
@@ -51,19 +51,9 @@ namespace Authentication.Application.ClientModule
             }
             return clientModel;
         }
-        public async Task<string> Create(ClientModule client)
+        public async Task<string> Create(Client client)
         {
-            string error = await ValidateUserData(client);
-            if (String.IsNullOrEmpty(error))
-            {
-                var clientevo = module(client);
-                error = await _clientRepository.Create(clientevo);
-                if (String.IsNullOrEmpty(error))
-                {
-                    return string.Empty;
-                }
-            }
-            return error;
+            return await _clientRepository.Create(client);
         }
 
 

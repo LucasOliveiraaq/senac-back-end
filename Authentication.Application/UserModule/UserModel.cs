@@ -1,4 +1,6 @@
-﻿namespace Authentication.Application.UserModule
+﻿using FluentValidation;
+
+namespace Authentication.Application.UserModule
 {
     public class UserModel
     {
@@ -8,5 +10,13 @@
         public string Password { get; set; }
         public string Role { get; set; }
         public string ConfirmPassword { get; set; }
+    }
+
+    public class UserModelValidator : AbstractValidator<UserModel>
+    {
+        public UserModelValidator()
+        {
+            RuleFor(m => m.Email).NotEmpty().WithMessage("Email invalido").MaximumLength(20);
+        }
     }
 }
